@@ -1,0 +1,27 @@
+#Take two lists and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.
+#Randomly generate two lists to test this
+#Write this in one line of Python
+
+#creating two random lists
+
+import random
+randomlist1 = []
+randomlist2 = []
+for i in range(0,5):
+    x = random.randint(1,30)
+    y = random.randint(2,50)
+    randomlist1.append(x)
+    randomlist2.append(y)
+print(randomlist1)
+print(randomlist2)
+
+#adding common elements to commonlist
+list1 = [2, 5, 6, 8,10, 26,23,36,57, 80, 66]
+list2 = [2, 5, 8, 8,10, 28,25,36,57,66,70]
+commonlist = []
+for i in list1:
+    for j in list2:
+        if i == j and i not in commonlist:
+            commonlist.append(i)
+commonlist.sort()
+print(commonlist)
