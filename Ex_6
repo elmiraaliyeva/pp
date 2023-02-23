@@ -1,0 +1,17 @@
+#Ask the user for a string and print out whether this string is a palindrome or not. 
+
+from math import ceil 
+a = 'abcba'
+poli = True
+for i in range(0, ceil(len(a)/2)):
+    print(f"sprawdzam {i}:{a[i]}      z      {-i-1} : {a[-i-1]}")
+    
+    if a[i] == a[-i-1]:
+        print("ok")
+    else:
+        poli = False
+        print("not ok")
+print(poli)
+
+
+print(a[::-1] == a)
